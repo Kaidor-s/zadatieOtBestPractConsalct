@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/jQuery.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/checkbox.css">
+	<title>БлокПост</title>
+</head>
+<body>
+	<div id="header" class="allWidth">
+		<div class="top-menu allWidth rel">
+			<div class="content-container allWidth">
+				<div class="rel container-top-menu">
+					<img style="width: 14px;height: 20px;" src="images/placeholder1_13767.png" alt="значок текущая геолокация">
+					<a href="">Старополь</a>
+					<img style="width: 9px;height: 5px;" src="images/right_arrow_13766.png" alt="стрелка список городов">
+				</div>
+				<div class="rel container-top-menu">
+					<a href="">Адреса&nbsp;магазинов</a>
+					<a href="">Клубная&nbsp;программа</a>
+					<a href="">Вход</a>
+					<img style="width: 14px;height: 16px;" src="images/user_13770.png" alt="Значок личного кабинета">
+				</div>
+			</div>
+		</div>
+
+		<div class="middle-menu allWidth rel ">
+			<div class="content-container allWidth">
+				<div class="rel container-middle-menu ">
+					<a href=""><img src="images/kjuj1_13751.png" alt="Логотип БлокПост"></a>
+				</div>
+				<div class="rel container-middle-menu">
+					<p>8&nbsp;(800)&nbsp;700-89-80</p>
+					<p>пн-вс&nbsp;с&nbsp;9:00&nbsp;до&nbsp;18:00&nbsp;(мск)</p>
+				</div>
+				<div class="rel container-middle-menu ">
+					<input type="text">
+					<button><img src="images/loupe_13749.png" alt="Кнопка поиска"></button>
+				</div>
+				<div class="rel container-middle-menu ">
+					<div>
+						<img src="images/free_icon_clock_needles_73440_13754.png" alt="Кнопка статус заказа">
+						<p>Статус&nbsp;заказа</p>
+					</div>
+					<div>
+						<img src="images/star_13746.png" alt="Кнопка избранное">
+						<p>Избранное</p>
+					</div>
+					<div>
+						<img src="images/basket_13740.png" alt="Кнопка корзина">
+						<p>Корзина</p>
+						<div id="countProduct">
+							<p>2</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="bottom-menu allWidth rel">
+			<div class="content-container allWidth">
+				<div class="rel container-bottom-menu allWidth">
+					<a href="">Для&nbsp;военных</a>
+					<a href="">Для&nbsp;туризма</a>
+					<a href="">Спецодежда</a>
+					<a href="">Сувениры</a>
+					<a href="">Акции</a>
+					<a href="">Распродажа</a>
+					<a href="">&#35;Стопкоронавирус</a>
+					<a href="">ОПТ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+
+
+	<div id="container" class="allWidth">
+		<div class="content-container">
+			<div class="container-breadCrums">
+				<span><a href="" class="main-breCru">Главная</a>&nbsp;&#8250;&nbsp;</span>
+				<span><a href="" class="main-breCru">Личный кабинет</a></span>
+			</div>
+
+
+			<div class="container-content">
+				<img style="width: 561px;height: 162px;" src="images/vash_profil_zapolnen_9988.png" alt="Прогресс заполнения профиля">
+				<canvas id='progressForm'>Прогресс заполнения</canvas>
+				<p id="progressForm_number">0%</p>
+				<form action="">
+					<h1>Мои данные</h1>
+					<div class="formBlock" id="formBlock_1">
+						<h3>Основные&nbsp;данные</h3>
+						<div class="dataElem">
+							<p>Иванов Иван Иванович</p>
+							<button onclick="return false" id="formBlock_1_edit">Изменить</button>
+						</div>
+						<div class="inputData invise">
+							<input id="formBlock_1_sname" required maxlength="40" type="text" placeholder="Иванов" name="sname"><strong>*</strong>
+							<input id="formBlock_1_fname" required maxlength="40" type="text" placeholder="Иван" name="fname"><strong>*</strong>
+							<input id="formBlock_1_pname" maxlength="40" type="text" placeholder="Иванович" name="pname">
+							<br><br>
+							<input onclick="return false;" id="formBlock_1_save" type="submit" name="save" value="Сохранить">
+							<input id="formBlock_1_cancel" type="reset" name="cancel" value="Отмена">
+							<br><br><br>
+						</div>
+					</div>
+
+
+					<div class="formBlock" id="formBlock_2">
+						<h3>Пол</h3>
+						<div class="dataElem">
+							<p>Мужской</p>
+							<button onclick="return false;" id="formBlock_2_edit">Изменить</button>
+						</div>
+						<div class="inputData invise">
+							<p>
+								<!-- <label for="sex_man"><input id="sex_man" type="checkbox" placeholder="Иванов" name="sex" value="man">Мужской</label>
+								<label for="sex_woman"><input id="sex_woman" type="checkbox" placeholder="Иван" name="sex" value="woman">Женский</label> -->
+								<div class="radio">
+								    <input class="custom-radio" type="radio" id="sexPeople_man" name="sex" value="man">
+								    <label for="sexPeople_man">Мужской</label>
+								    <input class="custom-radio" type="radio" id="sexPeople_woman" name="sex" value="woman">
+								    <label for="sexPeople_woman">Женский</label>
+							  	</div>
+							</p>
+							<br>
+							<input onclick="return false;" id="formBlock_2_save" type="submit" name="save" value="Сохранить">
+							<input id="formBlock_2_cancel" type="reset" name="cancel" value="Отмена">
+							<br><br><br>
+						</div>
+					</div>
+
+
+					<div class="formBlock" id="formBlock_3">
+						<h3>Дата&nbsp;рождения</h3>
+						<div class="dataElem">
+							<p>01 января 1998г.</p>
+							<button onclick="return false;"  id="formBlock_3_edit">Изменить</button>
+						</div>
+						<div class="inputData invise">
+							<p>
+								<input id="formBlock_3_day" maxlength="2" style="width:105px;" type="text" placeholder="01">
+								<select id="formBlock_3_month" >
+								  <option>Январь</option>
+								  <option>Февраль</option>
+								  <option>Март</option>
+								  <option>Апрель</option>
+								  <option>Май</option>
+								  <option>Июнь</option>
+								  <option>Июль</option>
+								  <option>Август</option>
+								  <option>Сентябрь</option>
+								  <option>Октябрь</option>
+								  <option>Ноябрь</option>
+								  <option>Декабрь</option>
+								</select>
+								<input  id="formBlock_3_year" maxlength="4" style="width:122px;"  type="text" placeholder="1998">
+							</p>
+
+							<input onclick="return false;" id="formBlock_3_save" type="submit" name="save" value="Сохранить">
+							<input id="formBlock_3_cancel" type="reset" name="cancel" value="Отмена">
+							<br><br><br>
+						</div>
+					</div>
+
+
+					<div class="formBlock" id="formBlock_4">
+						<h3>Телефон</h3>
+						<div class="dataElem">
+							<p>+7 000 000 00 00</p>
+							<button onclick="return false;"  id="formBlock_4_edit">Изменить</button>
+						</div>
+						<div class="inputData invise">
+							<input id="formBlock_4_number" maxlength="16" type="text" placeholder="+7 000 000 00 00" name="tel">
+							<br><br>
+							<input style="width: 346px;" onclick="return false;" id="formBlock_4_save" type="submit" name="save" value="Получить код подтверждения">
+							<input id="formBlock_4_cancel" type="reset" name="cancel" value="Отмена">
+							<br><br><br>
+						</div>
+						<div class="inputData-2 invise">
+							<input  id="formBlock_4_1_codeNumber" maxlength="6" type="text" placeholder="Код подтверждения" name="codeNumber">
+							<br><br>
+							<input onclick="return false;" id="formBlock_4_1_save" type="submit" name="send" value="Отправить">
+							<input id="formBlock_4_1_cancel" type="reset" name="cancel" value="Отмена">
+							<br><br><br>
+						</div>
+					</div>
+
+
+					<div class="formBlock-additional" id="formBlock_5">
+						<h3>Электронный&nbsp;адрес</h3>
+						<p class="sale">10%</p>
+						<div class="dataElem">
+							<button onclick="return false;"  id="formBlock_5_edit">Добавить</button>
+						</div>
+						<div class="inputData invise">
+							<input id="formBlock_5_email" maxlength="40" type="email" placeholder="e-mail" name="email">
+							<h4>Нажимая кнопку «Добавить», я соглашаюсь с <a href="">Правилами программы лояльности БлокПОСТ</a> и даю своё согласие на обработку моих персональных данных согласно Политике конфеденциальности БлокПОСТ.</h4>
+
+							<input onclick="return false;" id="formBlock_5_save" type="submit" name="save" value="Добавить">
+							<input id="formBlock_5_cancel" type="reset" name="cancel" value="Отмена">
+							<br><br><br>
+						</div>
+						<div class="inputData-2 invise">
+							<h4>На Ваш электронный адрес был выслан код подтверждения.</h4>
+							<input id="formBlock_5_1_codeEmail" maxlength="6" type="text" placeholder="Код подтверждения" name="codeEmail">
+							<br><br>
+							<input onclick="return false;" id="formBlock_5_1_save" type="submit" name="send" value="Отправить">
+							<input id="formBlock_5_1_cancel" type="reset" name="cancel" value="Отмена">
+							<br><br><br>
+						</div>
+					</div>
+
+
+					<div class="formBlock-additional" id="formBlock_6">
+						<h3>Откуда&nbsp;о&nbsp;нас&nbsp;узнали</h3>
+						<p class="sale">10%</p>
+						<div class="dataElem">
+							<button onclick="return false;"  id="formBlock_6_edit">Добавить</button>
+						</div>
+						<div class="inputData invise">
+							<select id="formBlock_aboutFromUs" style="width: 460px;">
+								<option>Выберите вариант</option>
+								<option>Lorem ipsum dolor sit amet </option>
+								<option>Lorem ipsum dolor sit amet </option>
+								<option>Lorem ipsum dolor sit amet </option>
+								<option>Lorem ipsum dolor sit amet </option>
+								<option>Lorem ipsum dolor sit amet </option>
+								<option>Lorem ipsum dolor sit amet </option>
+								<option>Lorem ipsum dolor sit amet </option>
+								<option>Lorem ipsum dolor sit amet </option>
+								<option>Lorem ipsum dolor sit amet </option>
+								<option>Lorem ipsum dolor sit amet </option>
+								<option>Lorem ipsum dolor sit amet </option>
+							</select>
+							<br><br><br>
+						</div>
+					</div>
+
+
+					<div class="formBlock-additional" id="formBlock_7">
+						<h3>Мои&nbsp;интересы</h3>
+						<p class="sale">20%</p>
+						<div class="dataElem">
+							<button onclick="return false;"  id="formBlock_7_edit">Добавить</button>
+						</div>
+						<div class="inputData invise">
+							<h5>Расскажите о своих интересах, чтобы первым(ой) узнавать об акциях, специальных предложениях, мероприятиях и конкурсах. Ниже Вы можете выбрать о чём именно Вам было бы интересно узнавать.</h5>
+							
+
+							<div id="interesting_container">
+								<div id="1" class="interesBlock">
+									<img src="images/interesting_icons/price_tag_12848_v1.png" alt="Акции и предложения">
+									<span>Акции&nbsp;и<br>предложения</span>
+								</div>
+								<div id="2" class="interesBlock">
+									<img src="images/interesting_icons/camping_tent_12853_v1.png" alt="Туризм">
+									<span>Туризм</span>
+								</div>
+								<div id="3" class="interesBlock">
+									<img src="images/interesting_icons/hunter_12858_v1.png" alt="Охота">
+									<span>Охота</span>
+								</div>
+								<div id="4" class="interesBlock">
+									<img src="images/interesting_icons/fishing_12863_v1.png" alt="Рыбалка">
+									<span>Рыбалка</span>
+								</div>
+								<div id="5" class="interesBlock">
+									<img src="images/interesting_icons/military_12868_v1.png" alt="Стиль Милитари">
+									<span>Стиль&nbsp;Милитари</span>
+								</div>
+								<div id="6" class="interesBlock">
+									<img src="images/interesting_icons/soldier_12873_v1.png" alt="Товары для военных">
+									<span>Товары&nbsp;<br>для&nbsp;военных</span>
+								</div>
+								<div id="7" class="interesBlock">
+									<img src="images/interesting_icons/policeman_12878_v1.png" alt="Форменная одежда и обувь">
+									<span>Форменная<br>одежда&nbsp;и&nbsp;обувь</span>
+								</div>
+								<div id="8" class="interesBlock">
+									<img src="images/interesting_icons/builder_12883_v1.png" alt="Спецодежда и обувь">
+									<span>Спецодежда<br>и&nbsp;обувь</span>
+								</div>
+								<div id="9" class="interesBlock">
+									<img src="images/interesting_icons/doctor_12888_v1.png" alt="Медицина">
+									<span>Медицина</span>
+								</div>
+								<div id="10" class="interesBlock">
+									<img  style="width:90px !important; margin: 24px  0 0 -40px;" src="images/interesting_icons/children_12893_v1.png" alt="Товары для детей и подростков">
+									<span>Товары&nbsp;для&nbsp;детей<br>и подростков</span>
+								</div>
+							</div>
+							<input onclick="return false;" id="formBlock_7_save" type="submit" name="save" value="Сохранить">
+							<input id="formBlock_7_cancel" type="reset" name="cancel" value="Отмена">	
+							<br><br><br>
+						</div>
+					</div>
+				</form>
+			</div>
+
+
+			<div class="container-sidebar">
+				<div class="sidebar-cabinet ">
+					<a href="">
+						<div class="cabinet-count-info invise"><p>2</p></div>
+						<img src="images/google_docs_13793.png" alt="Кнопка личный кабинет">
+						<span>Личный&nbsp;кабинет</span>
+					</a><br>
+					<a href="">
+						<div class="cabinet-count-info invise"><p>2</p></div>
+						<img src="images/user_13794.png" alt="Кнопка личные данные">
+						<span>Личные&nbsp;данные</span>
+					</a><br>
+					<a href="">
+						<div class="cabinet-count-info invise"><p>2</p></div>
+						<img src="images/star_kopiya_13801.png" alt="Кнопка избраное">
+						<span>Избраное</span></a><br>
+					<a href="">
+						<div class="cabinet-count-info invise"><p>2</p></div>
+						<img src="images/free_icon_placeholder_1180805_13792.png" alt="Кнопка сохраненные адреса">
+						<span>Сохраненные&nbsp;адреса</span>
+					</a><br>
+					<a href="">
+						<div class="cabinet-count-info invise"><p>2</p></div>
+						<img src="images/package_13799.png" alt="Кнопка мои заказы">
+						<span>Мои&nbsp;заказы</span>
+					</a><br>
+					<a href="">
+						<div class="cabinet-count-info invise"><p>2</p></div>
+						<img src="images/b_13800.png" alt="Кнопка мои бонусы">
+						<span>Мои&nbsp;бонусы</span>
+					</a><br>
+					<br>
+				</div>
+				<div class="sidebar-support ">
+					<br>
+					<p>НУЖНА&nbsp;ПОМОЩЬ?</p>
+					<a href="">Контакты</a><br>
+					<a href="">Условия&nbsp;доставки</a><br>
+					<a href="">Возврат&nbsp;и&nbsp;обмен</a><br>
+					<a href="">Условия&nbsp;программы&nbsp;лояльности</a>
+				</div>
+			</div>
+			<br><br>
+			<!-- <div style="height: 400px; width: 100%;"></div> -->
+		</div>
+	</div>
+	<!-- end  container-->
+
+
+
+	<div id="footer" class="allWidth">
+		<div class="content-container">
+			<div class="footer-column">
+				<p>
+					&#169; 2002 - 2021 Блокпост<br>
+					<br>
+					Материалы размещенные на сайте, носят информационный характер и не являются публичной офертой.<br>
+					Политика в отношении обработки персональных данных
+				</p>
+			</div>
+			<div class="footer-column">
+				<h1>Информация</h1>
+				<br>
+				<a href="">О&nbsp;компании</a><br>
+				<a href="">Партнерство</a><br>
+				<a href="">Вакансии</a><br>
+				<a href="">Новости</a><br>
+				<a href="">Отзывы</a><br>
+				<a href="">Полезная&nbsp;информация</a><br>
+				<a href="">Адреса&nbsp;магазинов</a>
+			</div>
+			<div class="footer-column">
+				<h1>Сервис&nbsp;и&nbsp;помощь</h1>
+				<br>
+				<a href="">Условия&nbsp;оплаты</a><br>
+				<a href="">Условия&nbsp;доставки</a><br>
+				<a href="">Оформление&nbsp;заказа</a><br>
+				<a href="">Возврат&nbsp;и&nbsp;обмен</a><br>
+				<a href="">Публичная&nbsp;оферта</a><br>
+				<a href="">Охрана&nbsp;труда</a><br>
+				<a href="">Написать&nbsp;директору</a>
+			</div>
+			<div class="footer-column">
+				<h1>Контакты</h1>
+				<br>
+				<span>8&nbsp;(800)&nbsp;700-89-80</span><br>
+				<span>shop@blok-post.ru</span>
+				<br><br>
+				<div class="footer-clubProg">
+					<a href=""><img src="images/pool_membership_card_13777.png" alt="Кнопка 'клубная программа'">
+					<span>Клубная&nbsp;программа</span></a>
+				</div>
+				<br><br>
+				<div class="footer-icons">
+					<a href=""><img src="images/instagram_13782.png" alt="Инстаграмм"></a>
+					<a href=""><img src="images/ok_13784.png" alt="Одноклассники"></a>
+					<a href=""><img src="images/vk_13785.png" alt="ВКонтакте"></a>
+					<a href=""><img src="images/facebook_13786.png" alt="Фэйсбук"></a>
+					<a href=""><img src="images/youtube_13783.png" alt="Ютуб"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+</body>
+<script src="js/script.js"></script>
+</html>
