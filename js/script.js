@@ -306,14 +306,29 @@ class Cabinet{
 	}
 
 
+	getEventsMobile(){
+		// footer_chapter
+		$('.footer_mobile .footer-column h1').on('click', function(){
+			var elem = this.parentNode.getElementsByClassName('footer_chapter');
+			if(elem[0]){ $(elem[0]).toggleClass('invise'); };
+		});
+
+		$('.mobile-search').on('click', function(){
+			$('#link_breadCrums').toggleClass('invise');
+			$('#mobile_loupe_icon').toggleClass('invise');
+			$('#mobile_search_input').toggleClass('invise');
+		});
+	}
+
+
 	getWork(){
 		// функция запускает все анимации и механизмы страницы
 		// console.log('getWork');
-
-		this.getHoverCountInfo();
+		if($('.container-sidebar')){ this.getHoverCountInfo(); };
 		this.getCkickEvents();
 		this.getClickInteresIcons();
-		this.getCanvasLoaderForm();
+		if($('#progressForm')[0]){ this.getCanvasLoaderForm(); };
+		this.getEventsMobile();
 	}
 }
 

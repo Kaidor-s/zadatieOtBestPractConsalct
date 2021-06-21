@@ -5,14 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="js/jQuery.js"></script>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style_mobile.css">
 	<link rel="stylesheet" href="css/checkbox.css">
 	<title>БлокПост</title>
 </head>
 <body>
 	<div id="header" class="allWidth">
-		<div class="top-menu allWidth rel">
-			<div class="content-container allWidth">
-				<div class="rel container-top-menu">
+
+
+
+
+		<div class="top-menu allWidth rel mob-invise">
+			<div class="content-container allWidth ">
+				<div class="rel container-top-menu mob-invise">
 					<img style="width: 14px;height: 20px;" src="images/placeholder1_13767.png" alt="значок текущая геолокация">
 					<a href="">Старополь</a>
 					<img style="width: 9px;height: 5px;" src="images/right_arrow_13766.png" alt="стрелка список городов">
@@ -21,25 +26,61 @@
 					<a href="">Адреса&nbsp;магазинов</a>
 					<a href="">Клубная&nbsp;программа</a>
 					<a href="">Вход</a>
-					<img style="width: 14px;height: 16px;" src="images/user_13770.png" alt="Значок личного кабинета">
+					<img style="width: 14px; height: 16px; top: 2px; position: relative;" src="images/user_13770.png" alt="Значок личного кабинета">
 				</div>
 			</div>
 		</div>
 
+
+
+
+
 		<div class="middle-menu allWidth rel ">
 			<div class="content-container allWidth">
-				<div class="rel container-middle-menu ">
-					<a href=""><img src="images/kjuj1_13751.png" alt="Логотип БлокПост"></a>
+				<div class="rel middle-menu-logo container-middle-menu">
+					<a href="" class="mob-invise"><img src="images/kjuj1_13751.png" alt="Логотип БлокПост"></a>
+					<a href="" class="middleMenu-logo-mobile"></a>
 				</div>
-				<div class="rel container-middle-menu">
+
+
+				<div class="rel middle-menu-phone container-middle-menu mob-invise">
 					<p>8&nbsp;(800)&nbsp;700-89-80</p>
 					<p>пн-вс&nbsp;с&nbsp;9:00&nbsp;до&nbsp;18:00&nbsp;(мск)</p>
 				</div>
-				<div class="rel container-middle-menu ">
+
+
+				<div class="rel middle-menu-search mob-invise container-middle-menu">
 					<input type="text">
 					<button><img src="images/loupe_13749.png" alt="Кнопка поиска"></button>
 				</div>
-				<div class="rel container-middle-menu ">
+
+
+				<div class="rel container-middle-menu middle-menu-functionArea invise mobile">
+					<div class="burger">
+						<p></p>
+						<p></p>
+						<p></p>
+					</div>
+					<div>
+						<img id="login-icon" src="images/mobile/user_2558.png" alt="Значок личного кабинета">
+					</div>
+					<div>
+						<img src="images/star_13746.png" alt="Кнопка избранное">
+					</div>
+					<div>
+						<img src="images/basket_13740.png" alt="Кнопка корзина">
+						<div id="countProduct">
+							<p>2</p>
+						</div>
+					</div>
+					<!-- invise -->
+					<div class="mobile-search">
+						<button><img src="images/loupe_13749.png" alt="Кнопка поиска"></button>
+					</div>
+				</div>
+
+
+				<div class="rel container-middle-menu middle-menu-functionArea mob-invise">
 					<div>
 						<img src="images/free_icon_clock_needles_73440_13754.png" alt="Кнопка статус заказа">
 						<p>Статус&nbsp;заказа</p>
@@ -56,11 +97,20 @@
 						</div>
 					</div>
 				</div>
+
+
+				<div  class="mobile-breadCrums invise mobile">
+					<a href="" id="link_breadCrums"><span><img src="images/mobile/strelka_3140.png" alt="Стрелка назад">&nbsp;</span><span>Личные&nbsp;данные</span></a>
+					<img id="mobile_loupe_icon" class="invise" src="images/mobile/loupe_2566.png" alt="Поиск">
+					<input id="mobile_search_input" class="invise" type="text" placeholder="Поиск">
+				</div>
 			</div>
 		</div>
+		
 
 
-		<div class="bottom-menu allWidth rel">
+
+		<div class="bottom-menu allWidth rel mob-invise" >
 			<div class="content-container allWidth">
 				<div class="rel container-bottom-menu allWidth">
 					<a href="">Для&nbsp;военных</a>
@@ -81,14 +131,14 @@
 
 	<div id="container" class="allWidth">
 		<div class="content-container">
-			<div class="container-breadCrums">
+			<div  class="container-breadCrums mob-invise">
 				<span><a href="" class="main-breCru">Главная</a>&nbsp;&#8250;&nbsp;</span>
 				<span><a href="" class="main-breCru">Личный кабинет</a></span>
 			</div>
 
 
 			<div class="container-content">
-				<img style="width: 561px;height: 162px;" src="images/vash_profil_zapolnen_9988.png" alt="Прогресс заполнения профиля">
+				<img id="loader_background" src="images/vash_profil_zapolnen_9988.png" alt="Прогресс заполнения профиля">
 				<canvas id='progressForm'>Прогресс заполнения</canvas>
 				<p id="progressForm_number">0%</p>
 				<form action="">
@@ -224,7 +274,7 @@
 							<button onclick="return false;"  id="formBlock_6_edit">Добавить</button>
 						</div>
 						<div class="inputData invise">
-							<select id="formBlock_aboutFromUs" style="width: 460px;">
+							<select id="formBlock_aboutFromUs">
 								<option>Выберите вариант</option>
 								<option>Lorem ipsum dolor sit amet </option>
 								<option>Lorem ipsum dolor sit amet </option>
@@ -291,7 +341,7 @@
 									<span>Медицина</span>
 								</div>
 								<div id="10" class="interesBlock">
-									<img  style="width:90px !important; margin: 24px  0 0 -40px;" src="images/interesting_icons/children_12893_v1.png" alt="Товары для детей и подростков">
+									<img  style="width:90px !important;" src="images/interesting_icons/children_12893_v1.png" alt="Товары для детей и подростков">
 									<span>Товары&nbsp;для&nbsp;детей<br>и подростков</span>
 								</div>
 							</div>
@@ -304,8 +354,8 @@
 			</div>
 
 
-			<div class="container-sidebar">
-				<div class="sidebar-cabinet ">
+			<div class="container-sidebar mob-invise">
+				<div class="sidebar-cabinet">
 					<a href="">
 						<div class="cabinet-count-info invise"><p>2</p></div>
 						<img src="images/google_docs_13793.png" alt="Кнопка личный кабинет">
@@ -354,9 +404,9 @@
 
 
 
-	<div id="footer" class="allWidth">
+	<div class="footer allWidth mob-invise">
 		<div class="content-container">
-			<div class="footer-column">
+			<div class="footer-column footer-previu">
 				<p>
 					&#169; 2002 - 2021 Блокпост<br>
 					<br>
@@ -364,7 +414,7 @@
 					Политика в отношении обработки персональных данных
 				</p>
 			</div>
-			<div class="footer-column">
+			<div class="footer-column footer-info">
 				<h1>Информация</h1>
 				<br>
 				<a href="">О&nbsp;компании</a><br>
@@ -375,7 +425,7 @@
 				<a href="">Полезная&nbsp;информация</a><br>
 				<a href="">Адреса&nbsp;магазинов</a>
 			</div>
-			<div class="footer-column">
+			<div class="footer-column footer-servise">
 				<h1>Сервис&nbsp;и&nbsp;помощь</h1>
 				<br>
 				<a href="">Условия&nbsp;оплаты</a><br>
@@ -386,7 +436,7 @@
 				<a href="">Охрана&nbsp;труда</a><br>
 				<a href="">Написать&nbsp;директору</a>
 			</div>
-			<div class="footer-column">
+			<div class="footer-column footer-contacts">
 				<h1>Контакты</h1>
 				<br>
 				<span>8&nbsp;(800)&nbsp;700-89-80</span><br>
@@ -404,6 +454,78 @@
 					<a href=""><img src="images/facebook_13786.png" alt="Фэйсбук"></a>
 					<a href=""><img src="images/youtube_13783.png" alt="Ютуб"></a>
 				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="footer footer_mobile allWidth mobile invise">
+		<div class="content-container">
+			
+			<div class="footer-column footer-info">
+				<h1>Информация</h1>
+				<img class="footer_chapter_arrow" style="width: 9px;height: 5px;" src="images/mobile/next_2831.png" alt="стрелка список городов">
+				<div class="footer_chapter invise">
+					<br>
+					<a href="">О&nbsp;компании</a><br>
+					<a href="">Партнерство</a><br>
+					<a href="">Вакансии</a><br>
+					<a href="">Новости</a><br>
+					<a href="">Отзывы</a><br>
+					<a href="">Полезная&nbsp;информация</a><br>
+					<a href="">Адреса&nbsp;магазинов</a>	
+				</div>
+			</div>
+
+
+			<div class="footer-column footer-servise">
+				<h1>Сервис&nbsp;и&nbsp;помощь</h1>
+				<img class="footer_chapter_arrow" style="width: 9px;height: 5px;" src="images/mobile/next_2831.png" alt="стрелка список городов">
+				<div class="footer_chapter invise">
+					<br>
+					<a href="">Условия&nbsp;оплаты</a><br>
+					<a href="">Условия&nbsp;доставки</a><br>
+					<a href="">Оформление&nbsp;заказа</a><br>
+					<a href="">Возврат&nbsp;и&nbsp;обмен</a><br>
+					<a href="">Публичная&nbsp;оферта</a><br>
+					<a href="">Охрана&nbsp;труда</a><br>
+					<a href="">Написать&nbsp;директору</a>	
+				</div>
+			</div>
+
+
+			<div class="footer-column footer-contacts">
+				<h1>Контакты</h1>
+				<img class="footer_chapter_arrow" style="width: 9px;height: 5px;" src="images/mobile/next_2831.png" alt="стрелка список городов">
+				<div class="footer_chapter invise">
+					<br>
+					<span>8&nbsp;(800)&nbsp;700-89-80</span><br>
+					<span>shop@blok-post.ru</span>
+					<br><br>
+					<div class="footer-clubProg">
+						<a href=""><img src="images/pool_membership_card_13777.png" alt="Кнопка 'клубная программа'">
+						<span>Клубная&nbsp;программа</span></a>
+					</div>
+					<br><br>
+					<div class="footer-icons">
+						<a href=""><img src="images/instagram_13782.png" alt="Инстаграмм"></a>
+						<a href=""><img src="images/ok_13784.png" alt="Одноклассники"></a>
+						<a href=""><img src="images/vk_13785.png" alt="ВКонтакте"></a>
+						<a href=""><img src="images/facebook_13786.png" alt="Фэйсбук"></a>
+						<a href=""><img src="images/youtube_13783.png" alt="Ютуб"></a>
+					</div>	
+				</div>
+			</div>
+
+
+			<div class="footer-column footer-previu">
+				<p>
+					&#169; 2002 - 2021 Блокпост<br>
+					<br>
+					Материалы размещенные на сайте, носят информационный характер и не являются публичной офертой.<br>
+					Политика в отношении обработки персональных данных
+				</p>
 			</div>
 		</div>
 	</div>
